@@ -4,7 +4,7 @@ This project uses MediaPipe and OpenCV to detect and track hand movements in rea
 
 ## Demo
 
-![Hand Tracking Demo](demo.gif)
+![Hand Tracking Demo](hand.gif)
 <!-- Add your GIF demonstration here -->
 
 ## Features
