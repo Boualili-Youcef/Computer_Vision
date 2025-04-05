@@ -4,8 +4,11 @@ import time # Pour les fps
 import os
 from dotenv import load_dotenv
 
-load_dotenv()
+
+env_path = os.path.join(os.path.dirname(__file__), '.env')
+load_dotenv(dotenv_path=env_path, override=True)
 ip_address = os.getenv('WEBCAM_IP')
+print(f"Adresse IP chargée : {ip_address}")
 
 # Je travaille sur wsl donc je dois utiliser l'adresse IP de ma machine Windows
 # pour accéder à la webcam de ma machine Windows
