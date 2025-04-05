@@ -49,7 +49,7 @@ class handDetector():
                     #print(id, x, y) # connaître les coordonnées de chaque landmark grace a l'id
                     lmList.append([id, x, y])
                     if draw and id == 0:
-                        cv2.circle(img, (x, y), 15, (255, 0, 255), cv2.FILLED)
+                        cv2.circle(img, (x, y), 15, (0, 0, 255), cv2.FILLED)
         return lmList
     
     
@@ -79,11 +79,7 @@ def main():
         success, img = cap.read()
         
         img = detector.findHands(img)
-        findHands = detector.trouverPosition(img)
-        if len(findHands) > 0:
-            print(findHands[7])
-        else:
-            print("Aucune main détectée")
+        detector.trouverPosition(img)
         
         # Pour les fps
         current_time = time.time()
